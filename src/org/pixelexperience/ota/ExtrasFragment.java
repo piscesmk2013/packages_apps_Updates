@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import android.os.ParcelFileDescriptor;
@@ -318,7 +320,27 @@ public class ExtrasFragment extends Fragment {
         }
 
         if (update.getDonateUrl() != null && !update.getDonateUrl().isEmpty()) {
-            donateCard.setOnClickListener(v -> openUrl(update.getDonateUrl()));
+            donateCard.setOnClickListener(v -> {
+                AlertDialog payMethod = new AlertDialog.Builder(getContext())
+                    .setTitle("选择支付方式")
+                    .setItems(new String[] {"支付宝", "微信"}, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            ImageView QRCode = new ImageView(getContext());
+                            QRCode.setImageResource(i == 0 ? R.drawable.ic_alipay : R.drawable.ic_wechat);
+                            AlertDialog QRDialog = new AlertDialog.Builder(getContext()).
+                                setPositiveButton("确定", new DialogInterface.OnClickListener() {                     
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.dismiss();
+                                    }
+                                }).setView(QRCode).create();
+                            QRDialog.show();
+                        }
+                    })
+                    .create();
+                payMethod.show();
+            });
             donateCard.setClickable(true);
             donateCard.setVisibility(View.VISIBLE);
         }
