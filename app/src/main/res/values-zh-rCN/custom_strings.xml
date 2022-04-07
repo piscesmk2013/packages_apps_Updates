@@ -60,7 +60,7 @@
     <string name="resume_button">继续</string>
     <string name="reboot">重新启动</string>
     <string name="reboot_needed_dialog_title">需要重新启动</string>
-    <string name="reboot_needed_dialog_summary">您的设备需要重新启动才能完成安装更新，您想现在就重启吗？</string>
+    <string name="reboot_needed_dialog_summary">您的设备需要重新启动才能完成安装更新。\n\n如果您想要保留 Magisk 更新，请点击\"取消\"并在重启前将 Magisk 安装到另一个分区。\n\n您想现在就重启吗？</string>
     <string name="details_button">查看更新日志</string>
     <!-- Installation -->
     <string name="apply_update_dialog_title">应用更新</string>
