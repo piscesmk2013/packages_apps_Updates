@@ -30,9 +30,9 @@ public final class Constants {
     static final String PROP_AB_DEVICE = "ro.build.ab_update";
     static final String PROP_DEVICE = "org.pixelexperience.device";
     static final String PROP_BUILD_VERSION = "org.pixelexperience.version";
-    static final String OTA_URL = "https://api.pixelexperience.org/ota/%s/%s";
-    static final String OTA_CI_URL = "https://api.pixelexperience.org/ota_ci/%s/%s";
-    static final String MAINTAINER_URL = "https://download.pixelexperience.org/team/%s";
-    static final String DOWNLOAD_WEBPAGE_URL = "https://download.pixelexperience.org/changelog/%s/%s";
+    static final String OTA_URL = "https://raw.githubusercontent.com/piscesmk2013/ota/thirteen/%s.json";
+    static final String OTA_CI_URL = "https://raw.githubusercontent.com/piscesmk2013/ota/thirteen/%s.json";
+    static final String MAINTAINER_URL = "https://www.pixelexperience.org";
+    static final String DOWNLOAD_WEBPAGE_URL = "https://raw.githubusercontent.com/piscesmk2013/OnePlus_7Series_PE13/master/更新日志.md";
     static final String EXPORT_PATH = "PixelExperience-Updates/";
 }
