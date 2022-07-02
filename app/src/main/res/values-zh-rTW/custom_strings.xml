@@ -101,7 +101,7 @@
     <string name="news_info_title">新聞</string>
     <string name="news_info_summary">隨時瞭解最新資訊</string>
     <string name="forum_info_title">論壇</string>
-    <string name="forum_info_summary">檢視討論區文章</string>
+    <string name="forum_info_summary">檢視我們在酷安上的文章</string>
     <string name="error_open_url">在瀏覽器中開啟 URL 失敗</string>
     <!-- Local update -->
     <string name="local_update_title">本地更新</string>

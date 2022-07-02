@@ -101,7 +101,7 @@
     <string name="news_info_title">新闻</string>
     <string name="news_info_summary">随时了解最新信息</string>
     <string name="forum_info_title">论坛</string>
-    <string name="forum_info_summary">查看论坛帖子</string>
+    <string name="forum_info_summary">查看我们在酷安上的讨论贴</string>
     <string name="error_open_url">打开链接失败</string>
     <!-- Local update -->
     <string name="local_update_title">本地更新</string>
