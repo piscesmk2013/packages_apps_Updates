@@ -51,8 +51,6 @@ public class ExtrasFragment extends Fragment {
     private LinearLayout maintainersLayout;
     private ExtraCardView donateCard;
     private ExtraCardView forumCard;
-    private ExtraCardView websiteCard;
-    private ExtraCardView newsCard;
     private ExtraCardView localUpdateCard;
 
     private static final int SELECT_FILE = 1001;
@@ -86,8 +84,6 @@ public class ExtrasFragment extends Fragment {
         maintainersLayout = mainView.findViewById(R.id.maintainers);
         donateCard = mainView.findViewById(R.id.donate_card);
         forumCard = mainView.findViewById(R.id.forum_card);
-        websiteCard = mainView.findViewById(R.id.website_card);
-        newsCard = mainView.findViewById(R.id.news_card);
         return mainView;
     }
 
@@ -313,8 +309,6 @@ public class ExtrasFragment extends Fragment {
             for (MaintainerInfo maintainer : maintainers) {
                 ExtraCardView maintainerCard = createMaintainerCard(getActivity());
                 maintainerCard.setSummary(maintainer.getName());
-                maintainerCard.setOnClickListener(v -> openUrl(Utils.getMaintainerURL(maintainer.getUsername())));
-                maintainerCard.setClickable(true);
                 maintainersLayout.addView(maintainerCard);
             }
         }
@@ -349,18 +343,6 @@ public class ExtrasFragment extends Fragment {
             forumCard.setOnClickListener(v -> openUrl(update.getForumUrl()));
             forumCard.setClickable(true);
             forumCard.setVisibility(View.VISIBLE);
-        }
-
-        if (update.getWebsiteUrl() != null && !update.getWebsiteUrl().isEmpty()) {
-            websiteCard.setOnClickListener(v -> openUrl(update.getWebsiteUrl()));
-            websiteCard.setClickable(true);
-            websiteCard.setVisibility(View.VISIBLE);
-        }
-
-        if (update.getNewsUrl() != null && !update.getNewsUrl().isEmpty()) {
-            newsCard.setOnClickListener(v -> openUrl(update.getNewsUrl()));
-            newsCard.setClickable(true);
-            newsCard.setVisibility(View.VISIBLE);
         }
 
     }

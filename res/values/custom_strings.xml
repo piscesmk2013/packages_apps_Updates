@@ -112,7 +112,7 @@
     <string name="news_info_title">News</string>
     <string name="news_info_summary">Stay informed about updates and other news</string>
     <string name="forum_info_title">Forum</string>
-    <string name="forum_info_summary">View forum posts</string>
+    <string name="forum_info_summary">Check out our discussion thread on CoolApk</string>
     <string name="error_open_url">Failed to open URL in browser</string>
 
     <!-- Local update -->
